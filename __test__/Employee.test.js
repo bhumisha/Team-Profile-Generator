@@ -11,7 +11,7 @@ const employeeTest = new Employee(
     mockEmployee.id,
     mockEmployee.email
 );
-test ("Employee",() => {
+test ("Employee Detail",() => {
     expect(employeeTest.name).toBe(mockEmployee.name);
     expect(employeeTest.id).toBe(mockEmployee.id);
     expect(employeeTest.email).toBe(mockEmployee.email);

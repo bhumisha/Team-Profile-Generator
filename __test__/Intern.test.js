@@ -9,3 +9,8 @@ test('Create Testcase for Intern Object' , () => {
 test('getSchool' , () => {
     expect(intern1.getSchool()).not.toBeNull();
 })
+
+
+test('getRole' , () => {
+    expect(intern1.getRole()).toBe('Intern');
+})

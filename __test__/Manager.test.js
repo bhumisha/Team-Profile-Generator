@@ -10,3 +10,7 @@ test('getOfficeNumber' , () => {
     expect(ManagerObj1.getOfficeNumber()).not.toBeNull();
     expect(ManagerObj1.getOfficeNumber()).toEqual(expect.any(Number));
 })
+
+test('getRole' , () => {
+    expect(engineer.getRole()).toBe('Manager');
+})

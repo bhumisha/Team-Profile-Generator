@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-
+//This function is help to write file
 const writeFile = fileContent => {
     return new Promise((resolve, reject) => {
       fs.writeFile('../dist/index.html', fileContent, err => {
@@ -20,6 +20,7 @@ const writeFile = fileContent => {
     });
   };
 
+//This function is used to copy css file to dist folder.
 const copyFile =  () => {
     return new Promise((resolve,reject) =>
     {

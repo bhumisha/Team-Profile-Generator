@@ -5,6 +5,10 @@ test('Create Testcase for Engineer Object' , () => {
     expect(engineer.github).not.toBeNull();
 })
 
-test('getSchool' , () => {
+test('getGithub' , () => {
     expect(engineer.getGitHub()).not.toBeNull();
+})
+
+test('getRole' , () => {
+    expect(engineer.getRole()).toBe('Engineer');
 })

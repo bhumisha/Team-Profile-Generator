@@ -7,6 +7,7 @@ const generateHTMLPage = require('./utils/page-template');
 
 const teamDetail = [];
 
+//This function is prompt for Employee to choose employee Role.
 const employeeRolePrompt = () =>{
     return inquirer.prompt([
         {
@@ -18,6 +19,7 @@ const employeeRolePrompt = () =>{
     ]);
 };
 
+//This function is prompt for Employee Data - Super constructor call.
 const promtSuperEmployee = (employeeRole) => {
     return inquirer.prompt([
     {
@@ -62,6 +64,7 @@ const promtSuperEmployee = (employeeRole) => {
     ])
 };
 
+//This function is prompt for Manager Data
 const promtManager = () => {
     return inquirer.prompt([
     {
@@ -79,7 +82,7 @@ const promtManager = () => {
     }
     ])
 };
-
+//This function is prompt for Engineer Data
 const promptEngineer = () => {
     return inquirer.prompt([
         {
@@ -99,6 +102,7 @@ const promptEngineer = () => {
     
 };
 
+//This function is prompt for Intern Data
 const promptIntern = () => {
 return inquirer.prompt([
         {
@@ -117,7 +121,8 @@ return inquirer.prompt([
     ])
 };
 
-function buildTeam() {
+//This will help to build team and called recursive function.
+const buildTeam = () => {
 
     employeeRolePrompt()
     .then((employeeRole)=>{
@@ -165,7 +170,9 @@ function buildTeam() {
     .catch(err => {
         console.log(err);
     });     
-  }
+}
+
 console.log("Please build your team!!\n")
+
 // Function call to initialize app
 buildTeam();  
