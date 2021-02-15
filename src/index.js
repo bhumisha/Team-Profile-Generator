@@ -2,10 +2,10 @@ const inquirer = require('inquirer');
 const Manager = require('../lib/Manager');
 const Intern = require('../lib/Intern');
 const Engineer = require('../lib/Engineer');
-
-const teamDetail = [];
 const generateFileSite = require('./utils/generate-site');
 const generateHTMLPage = require('./utils/page-template');
+
+const teamDetail = [];
 
 const employeeRolePrompt = () =>{
     return inquirer.prompt([
@@ -152,6 +152,7 @@ function buildTeam() {
             });
         }
         else{
+            console.log("Please check dist/index.html for Team Profile!")
             generateFileSite.writeFile(generateHTMLPage(teamDetail))
             .then(writeFileResponse => {
                 console.log(writeFileResponse);
@@ -165,6 +166,6 @@ function buildTeam() {
         console.log(err);
     });     
   }
-  console.log("Please build your team!!\n")
+console.log("Please build your team!!\n")
 // Function call to initialize app
 buildTeam();  
